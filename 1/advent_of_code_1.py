@@ -37,13 +37,8 @@ def test2():
     for idx, item in enumerate(input):
         extracted_number = re.findall(r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', item)
 
-
         to_append = "%s%s" % (mapping.get(extracted_number[0], extracted_number[0]), mapping.get(extracted_number[-1],extracted_number[-1]))
 
-      
-        print(item, extracted_number ,to_append)
-
-        #print(item, extracted_number, to_append)
         processed.append(to_append)
 
 
@@ -58,6 +53,6 @@ def test2():
         
     
 if __name__ == "__main__":
-    # test()
+    test()
     test2()
     
